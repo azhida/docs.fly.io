@@ -5,6 +5,7 @@ export default defineConfig({
   title: "Fly.io 使用手册",
   description: "Fly.io 使用手册",
   cleanUrls: true,
+  base: '/docs.fly.io/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     outline: 'deep',
