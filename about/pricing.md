@@ -1,1 +1,126 @@
 # Fly.io Resource Pricing
+
+## How it works
+
+Our pricing lets you try Fly.io with a free trial credit for new customers, and then scale costs affordably as your needs grow.
+
+Fly.io services are billed per organization. Every organization is on a plan, and each plan includes some usage. If you want to scale beyond your plan, then you can upgrade, or just pay for what you need at the usage-based pricing listed below.
+
+::: tip
+Organizations are administrative entities on Fly.io that let you add members, share app development environments, and manage billing separately. Billing is based on the resources provisioned for your apps, pro-rated for the time they are provisioned.
+:::
+
+## Plans
+
+Check out our plans and plan pricing.
+
+Every organization belongs to a plan. When you create a new organization, it starts on the Hobby plan. If you need more support or compliance options, then you can upgrade to a Launch, Scale, or Enterprise plan.
+
+Some usage is included with our plans (except the Legacy Hobby plan). You can upgrade your plan at any time, or just pay for extra usage at the usage-based prices listed below.
+
+::: warning
+Regardless of which plan you’re on, your organization may be subject to automated scaling limits to prevent abuse or to help with capacity planning. Email the address in the error message if you run into such a limit and it’s getting in your way.
+:::
+
+All plans require a credit card on file. For details, or to select a different plan, see Plan Pricing.
+
+### 新用户可以免费试用
+
+When you sign up for a Fly.io account, you get a one-time $5 free trial credit to let you test-drive Fly.io at no cost. You won’t be charged for the $5/month Hobby plan subscription until the credit has been used up. The free trial credit doesn’t expire.
+
+Usage beyond our free resource allowances consumes your free trial credit.
+
+The free trial credit applies to your default (“personal”) organization that we create for you on sign-up. When the free trial credit is used up, that organization is automatically placed on the $5/month Hobby plan (we’ll send you an email when it happens).
+
+### Legacy Hobby plan
+
+If you were on the free Hobby plan at the time that the paid Hobby plan became the default for new users, your plan is now called the Legacy Hobby plan. Your costs stay the same as they were, with no monthly subscription fee, and no included usage beyond the free resource allowances that apply to all plans.
+
+If you upgrade to a different plan and downgrade back to Hobby, you’ll be on the current (paid) Hobby plan.
+
+## 免费额度 Free allowances
+
+Resources included for free on all plans:
+- Up to 3 shared-cpu-1x 256mb VMs
+- 3GB persistent volume storage (total)
+- 160GB outbound data transfer
+
+Additional resources are billed at the usage-based pricing detailed below.
+
+所有计划均免费提供资源:
+- 最多3个 shared-cpu-1x 256mb 虚拟机
+- 3GB持久卷存储(总数)
+- 160GB出站数据传输
+
+额外的资源按下面详细的基于使用的定价收取费用。
+
+## Compute
+
+We charge for started and stopped Machines differently. Attached GPUs are charged separately. For more details about how costs are calculated, see Machine billing.
+
+### Started Fly Machines
+
+The price of a running Fly Machine VM is the price of a named CPU/RAM preset, plus about $5 per 30 days per GB of additional RAM.
+
+Here’s the pricing for named presets and the allowed additional RAM configurations:
+以下是命名预设和允许的额外RAM配置的定价:
+
+### Stopped Fly Machines
+
+For stopped machines we charge only for the root file system (rootfs) needed for each machine. Each 1GB of rootfs for a machine stopped for 30 days is $0.15. The amount of rootfs needed is defined by your OCI image generated on your app plus a few containerd tweaks on the underlying file system.
+
+### GPUs and Fly Machines
+
+Pricing for a GPU-enabled Fly Machine is the price of a standard Fly Machine (see above) plus the price of the attached GPU. Like Machines, GPUs are billed by the second when the attached Machine is running.
+
+On-demand GPU pricing:
+按需GPU定价:
+- A10: $1.50/hr per GPU
+- L40S: $2.50/hr per GPU
+- A100 40G PCIe: $2.50/hr per GPU
+- A100 80G SXM: $3.50/hr per GPU
+
+Usage terms:
+- No minimum usage requirements.
+- Customizable CPU, RAM, and storage options.
+
+Reserved and dedicated options:
+- Discounted rates for reserved GPU Machines and dedicated hosts.
+
+## Persistent Storage Volumes
+
+Fly Volumes are local persistent storage for Machines.
+
+- Free: 3GB of total provisioned capacity per organization
+- $0.15/GB per month of provisioned capacity
+
+Volume billing is pro-rated to the hour.
+
+You’ll be charged for volumes that you create, whether they are attached to a Machine or not, including when an attached Machine is stopped.
+
+## Network prices
+
+### Anycast IP addresses
+
+Each application receives a shared IPv4 address and unlimited Anycast IPv6 addresses for global load balancing.
+
+Dedicated IPv4 addresses are $2/mo.
+
+### Managed SSL certificates
+
+We use Lets Encrypt to issue certificates, and donate half of our SSL fees to them at the end of each calendar year.
+
+- Single hostname certificates:
+  - Free for the first 10
+  - $0.10/mo for additional certificates
+- Wildcard certificates: $1/mo
+
+### Outbound data transfer
+
+We bill for outbound data transfer from the region a VM is running in, inbound transfer is free.
+
+## Fly Kubernetes
+
+## LiteFS Cloud
+
+## Support
