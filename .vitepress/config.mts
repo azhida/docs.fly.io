@@ -51,6 +51,21 @@ export default defineConfig({
           {text: 'Crontab with Supercronic', link: '/supercronic'}
         ]
       },
+      {
+        text: 'Language & Framework Guides', base: '/languages-and-frameworks', link: '/', collapsed: false,
+        items: [
+          { text: 'Laravel on Fly.io', link: '/', base: '/laravel', collapsed: false,
+            items: [
+              { text: 'the-basics', base: '/laravel/the-basics', link: '/', collapsed: false, 
+                items: [
+                  { text: 'php-node-version', link: '/php-node-version'}
+                ]
+              }
+            ]
+           }
+        ]
+
+      },
       { text: 'About', link: '/', base: '/about', collapsed: false,
         items: [
           {text: 'Pricing', link: '/pricing'},
